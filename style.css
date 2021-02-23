@@ -98,6 +98,7 @@ button {
 .why-us {
   text-align: center;
   margin-top: 3em;
+  text-align: -webkit-center;
 }
 .why-us h1 {
   font-size: 3em;
@@ -109,6 +110,7 @@ button {
 .why-us-img-wrapper {
   display: flex;
   padding: 1.5em;
+  max-width: 100em;
 }
 .img-element img {
   max-width: 15em;
@@ -150,6 +152,12 @@ button {
   }
   .left-wrapper {
     align-self: center;
+    text-align: -webkit-center;
+  }
+  .left-wrapper h1 {
+  color: #fff;
+  font-size: 2.7em;
+  padding-right: 0em;
   }
   .right-wrapper {
     margin-top: 2em;
@@ -344,13 +352,14 @@ button {
   }
   .left-wrapper button {
     width: 14em;
-  }
+    height: 4em;
+}
   .left-wrapper {
     align-self: center;
   }
   .recorrido-virtual {
     width: 15em;
-    height: 3.5em;
+    height: 4.5em;
   }
   .left-wrapper-img img {
     height: auto;
