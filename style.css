@@ -373,8 +373,13 @@ button {
 }
 @media (max-width: 425px) {
   .left-wrapper button {
-    width: 20em;
+    width: 14em;
+    height: 4em;
   }
+  .right-wrapper-text h1 {
+    font-size: 2em;
+    padding: 0.4em;
+}
   .left-wrapper-img img {
     height: auto;
     max-width: 350px;
