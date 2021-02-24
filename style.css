@@ -5,8 +5,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    max-width: 100%;
-  }
+  max-width: 100%;
+}
 .main-wrapper {
   background: #00a19a;
   padding-bottom: 2em;
@@ -47,6 +47,10 @@ body {
   font-size: 2.7em;
   padding-right: 3em;
 }
+.left-wrapper p {
+  max-width: 70%;
+  margin-top: 1em;
+}
 .left-wrapper button {
   width: 38em;
   padding: 0.5em 2em;
@@ -58,13 +62,30 @@ body {
   margin-top: 3em;
   height: 3em;
 }
+iframe {
+  border: none;
+  margin-top: 2em;
+}
 button {
   font-size: 1em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 @keyframes example {
-  from {margin-top:10em}
-  to {margin-top:3em}
+  from {
+    margin-top: 10em;
+  }
+  to {
+    margin-top: 3em;
+  }
+}
+@keyframes phone {
+  from {
+    margin-right: 10em;
+  }
+  to {
+    margin-right: 0em;
+  }
 }
 .main-content {
   position: relative;
@@ -77,9 +98,16 @@ button {
   margin-top: 3em;
   justify-content: center;
 }
+.left-wrapper-img {
+  align-self: center;
+}
 .left-wrapper-img img {
   height: auto;
   max-width: 600px;
+  position: relative;
+  animation-name: phone;
+  animation-duration: 3s;
+  animation-direction: normal;
 }
 .right-wrapper-text {
   max-width: 600px;
@@ -121,7 +149,7 @@ button {
   font-size: 3em;
 }
 .why-us p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 1em;
 }
 .why-us-img-wrapper {
@@ -167,6 +195,12 @@ button {
   background: #00a19a;
   font-weight: bold;
 }
+@media (max-width: 1270px) {
+  iframe {
+    border: none;
+    margin-top: 5em;
+  }
+}
 @media (max-width: 992px) {
   .first-content-wrapper {
     display: block;
@@ -176,13 +210,17 @@ button {
     text-align: -webkit-center;
   }
   .left-wrapper h1 {
-  color: #fff;
-  font-size: 2.7em;
-  padding-right: 0em;
+    color: #fff;
+    font-size: 2.7em;
+    padding-right: 0em;
   }
   .right-wrapper {
     margin-top: 2em;
     text-align: center;
+  }
+  iframe {
+    border: none;
+    margin-top: 2em;
   }
   .img-element img {
     max-width: 10em;
@@ -190,9 +228,9 @@ button {
   .colaboramos-img-container img {
     max-width: 12em;
     height: auto;
-  } 
+  }
   .recorrido-virtual {
-  width: 23em;
+    width: 23em;
   }
   .colaboramos-img-container {
     padding: 1em;
@@ -202,6 +240,10 @@ button {
   }
   .colaboramos h1 {
     margin-top: 1px;
+  }
+  .recorrido-virtual {
+    width: 21em;
+  }
 }
 @media (max-width: 920px) {
   .recorrido-virtual {
@@ -210,15 +252,16 @@ button {
   .left-wrapper-img img {
     height: auto;
     max-width: 530px;
-  } 
+  }
   .left-wrapper {
-  text-align: center;
+    text-align: center;
   }
   .left-wrapper h1 {
-  padding-right: 0em;
+    padding-right: 0em;
   }
   .left-wrapper {
-    align-self: center;
+    align-items: center;
+    text-align: -webkit-center;
   }
 }
 @media (max-width: 845px) {
@@ -228,6 +271,13 @@ button {
   }
   .left-wrapper {
     align-self: center;
+  }
+  .img-element {
+    max-width: 20em;
+  }
+  .right-wrapper-text h1 {
+    margin-right: 0em;
+    font-size: 2.5em;
   }
 }
 @media (max-width: 780px) {
@@ -243,6 +293,9 @@ button {
   .left-wrapper {
     align-self: center;
   }
+  .left-wrapper button {
+    width: 34em;
+  }
 }
 @media (max-width: 710px) {
   .contact-sell-us {
@@ -254,9 +307,9 @@ button {
     height: auto;
     max-width: 410px;
   }
-.right-wrapper-text h1 {
-  margin-right: 0em;
-  margin-top: 2em;
+  .right-wrapper-text h1 {
+    margin-right: 0em;
+    margin-top: 2em;
   }
   .parrafos {
     margin-top: 1em;
@@ -268,7 +321,7 @@ button {
     height: 3.5em;
   }
   .right-wrapper {
-    margin-top: 3em; 
+    margin-top: 3em;
   }
   .main-wrapper {
     padding-bottom: 1em;
@@ -282,27 +335,37 @@ button {
     padding: 0em;
   }
   .colaboramos-img-wrapper {
-  display: block;
-  margin-top: 0em;
- }
+    display: block;
+    margin-top: 0em;
+  }
   .colaboramos-img-container {
-  padding: 0em;
-  margin-top: 2em;
+    padding: 0em;
+    margin-top: 2em;
   }
   .colaboramos-img-container img {
-  max-width: 14em;
-  height: auto;
+    max-width: 14em;
+    height: auto;
   }
   .left-wrapper {
     align-self: center;
   }
   .left-wrapper button {
-    width: 33em;
+    width: 28em;
+  }
+  .img-element {
+    max-width: 19em;
+  }
+  .recorrido-virtual {
+    width: 34em;
+    height: 3.5em;
+  }
+  .why-us h1 {
+    font-size: 2.6em;
   }
 }
 @media (max-width: 600px) {
   .left-wrapper button {
-    width: 30em;
+    width: 27em;
   }
   .left-wrapper {
     align-self: center;
@@ -310,7 +373,10 @@ button {
   .recorrido-virtual {
     width: 30em;
     height: 3.5em;
- }
+  }
+  .colaboramos button {
+    width: 30em;
+  }
 }
 @media (max-width: 560px) {
   .colaboramos button {
@@ -318,7 +384,7 @@ button {
     width: 27em;
   }
   .left-wrapper button {
-    width: 25em;
+    width: 23em;
   }
 }
 @media (max-width: 520px) {
@@ -341,16 +407,20 @@ button {
   .login {
     margin-right: 1.5em;
   }
-    .logo {
-      margin-left: 1.5em;
+  .logo {
+    margin-left: 1.5em;
   }
   .left-wrapper {
     align-self: center;
   }
+  .left-wrapper button {
+    width: 21em;
+  }
 }
 @media (max-width: 480px) {
   .left-wrapper button {
-    width: 20em;
+    width: 17em;
+    height: 4em;
   }
   .colaboramos button {
     width: 23em;
@@ -379,13 +449,18 @@ button {
   .right-wrapper-text h1 {
     font-size: 2em;
     padding: 0.4em;
-}
+  }
+  iframe {
+    border: none;
+    margin-top: 2em;
+    max-width: 16em;
+  }
   .left-wrapper-img img {
     height: auto;
     max-width: 350px;
   }
   .colaboramos button {
-    width: 22em;
+    width: 20em;
     margin-top: 4em;
   }
   .left-wrapper {
@@ -400,11 +475,15 @@ button {
   .left-wrapper button {
     width: 12em;
     height: 4em;
-}
-  .first-content-wrapper {
-    margin: 0em
   }
-  
+  .first-content-wrapper {
+    margin: 0em;
+  }
+  iframe {
+    border: none;
+    margin-top: 2em;
+    max-width: 12em;
+  }
   .left-wrapper {
     align-self: center;
   }
@@ -419,4 +498,4 @@ button {
   .colaboramos button {
     width: 14em;
   }
-} 
+}
