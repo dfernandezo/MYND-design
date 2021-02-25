@@ -2,6 +2,15 @@
   margin: 0;
   padding: 0;
 }
+[data-scroll] {
+  transition: opacity 5s;
+}
+[data-scroll="in"] {
+  opacity: 10;
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -71,32 +80,32 @@ button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-@keyframes example {
-  from {
-    margin-top: 10em;
-  }
-  to {
-    margin-top: 3em;
-  }
+
+.main-content[data-scroll] {
+  transition: opacity 3s ease;
 }
-@keyframes phone {
-  from {
-    margin-right: 10em;
-  }
-  to {
-    margin-right: 0em;
-  }
+.main-content[data-scroll="in"] {
+  margin-top: 10em;
+}
+.main-content[data-scroll="out"] {
+  margin-top: 0em;
 }
 .main-content {
   position: relative;
   animation-name: example;
   animation-duration: 3s;
   animation-direction: normal;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
 }
 .contact-sell-us {
   display: flex;
   margin-top: 3em;
   justify-content: center;
+  position: relative;
+  animation-name: phone;
+  animation-duration: 3s;
+  animation-direction: normal;
 }
 .left-wrapper-img {
   align-self: center;
@@ -104,10 +113,6 @@ button {
 .left-wrapper-img img {
   height: auto;
   max-width: 600px;
-  position: relative;
-  animation-name: phone;
-  animation-duration: 3s;
-  animation-direction: normal;
 }
 .right-wrapper-text {
   max-width: 600px;
