@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>MYND</title>
   </head>
@@ -34,7 +35,7 @@
       </div>
     </div>
     <div class="main-content">
-      <div class="contact-sell-us">
+      <div class="contact-sell-us animated animatedFadeInUp fadeInUp">
         <div class="left-wrapper-img">
           <img src="/images/phone 1.png" alt="phone" data-aos="fade-right" />
         </div>
@@ -116,6 +117,23 @@
       </div>
     </div>
     <script>
+      ScrollOut({
+        targets: ".main-content",
+        onShown: function (el) {
+          if (!el.src) {
+            el.src = el.dataset.src;
+          }
+        },
+        onHidden: function (el) {
+          if (!el.src) {
+            el.src = el.dataset.src;
+          }
+        },
+      });
+      // const note = document.querySelector(".note");
+      // css(note, {
+      //   transition: 2s all ease-in-out .1s;
+      // });
     </script>
   </body>
 </html>

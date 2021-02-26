@@ -2,15 +2,6 @@
   margin: 0;
   padding: 0;
 }
-[data-scroll] {
-  transition: opacity 5s;
-}
-[data-scroll="in"] {
-  opacity: 10;
-}
-[data-scroll="out"] {
-  opacity: 0;
-}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -18,8 +9,8 @@ body {
 }
 .main-wrapper {
   background: #00a19a;
-  padding-bottom: 2em;
   max-width: 100%;
+  height: 100vh;
 }
 .header-wrapper {
   display: flex;
@@ -81,31 +72,52 @@ button {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.main-content[data-scroll] {
-  transition: opacity 3s ease;
+/*.main-content[data-scroll="in"] {
+  transition: 5s all ease-in-out 0.1s;
+}*/
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
-.main-content[data-scroll="in"] {
-  margin-top: 10em;
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
-.main-content[data-scroll="out"] {
-  margin-top: 0em;
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
 }
-.main-content {
-  position: relative;
-  animation-name: example;
-  animation-duration: 3s;
-  animation-direction: normal;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
+
+.animatedFadeInUp {
+  opacity: 0;
 }
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
 .contact-sell-us {
   display: flex;
   margin-top: 3em;
   justify-content: center;
-  position: relative;
-  animation-name: phone;
-  animation-duration: 3s;
-  animation-direction: normal;
 }
 .left-wrapper-img {
   align-self: center;
@@ -409,12 +421,6 @@ button {
     margin-top: 1px;
     font-size: 2.5em;
   }
-  .login {
-    margin-right: 1.5em;
-  }
-  .logo {
-    margin-left: 1.5em;
-  }
   .left-wrapper {
     align-self: center;
   }
@@ -447,6 +453,9 @@ button {
   }
 }
 @media (max-width: 425px) {
+  .first-content-wrapper {
+    padding: 1.3em;
+  }
   .left-wrapper button {
     width: 14em;
     height: 4em;
@@ -459,6 +468,25 @@ button {
     border: none;
     margin-top: 2em;
     max-width: 16em;
+  }
+  .logo {
+    margin-left: 0.5em;
+    margin-top: 1em;
+  }
+  .login {
+    width: 10.5em;
+    height: 3em;
+    margin-right: 1em;
+    margin-top: 2.5em;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    padding: 0em;
+  }
+  .logo img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 0em;
   }
   .left-wrapper-img img {
     height: auto;
@@ -473,6 +501,72 @@ button {
   }
 }
 @media (max-width: 370px) {
+  .main-wrapper {
+    height: 140vh;
+  }
+  .left-wrapper h1 {
+    padding-right: 0em;
+    font-size: 2em;
+  }
+  .left-wrapper button {
+    width: 15em;
+    height: 4em;
+  }
+  .first-content-wrapper {
+    margin: 0em;
+  }
+  .right-wrapper {
+    margin-top: 2em;
+  }
+  iframe {
+    border: none;
+    margin-top: 2em;
+    max-width: 12em;
+  }
+  .left-wrapper {
+    align-self: center;
+  }
+  .recorrido-virtual {
+    width: 15em;
+    height: 4.5em;
+  }
+  .left-wrapper-img img {
+    height: auto;
+    max-width: 275px;
+  }
+  .colaboramos button {
+    width: 17em;
+  }
+  .header-wrapper {
+    display: block;
+    text-align: center;
+  }
+  .logo img {
+    margin-top: 1em;
+  }
+  .login {
+    width: 12.5em;
+    height: 3.5em;
+    margin-top: 3em;
+    border-radius: 7px;
+    font-weight: bold;
+    padding: 0em;
+    margin-right: 0em;
+  }
+  .logo {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .left-wrapper p {
+    max-width: 100%;
+    margin-top: 2em;
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 325px) {
+  .main-wrapper {
+    height: 150vh;
+  }
   .left-wrapper h1 {
     padding-right: 0em;
     font-size: 1.5em;
@@ -483,6 +577,9 @@ button {
   }
   .first-content-wrapper {
     margin: 0em;
+  }
+  .right-wrapper {
+    margin-top: 2em;
   }
   iframe {
     border: none;
@@ -502,5 +599,31 @@ button {
   }
   .colaboramos button {
     width: 14em;
+  }
+  .header-wrapper {
+    display: block;
+    text-align: center;
+  }
+  .logo img {
+    margin-top: 1em;
+  }
+  .login {
+    width: 10.5em;
+    height: 2.5em;
+    margin-top: 2em;
+    border: 0px;
+    border-radius: 7px;
+    font-weight: bold;
+    padding: 0em;
+    margin-right: 0em;
+  }
+  .logo {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .left-wrapper p {
+    max-width: 100%;
+    margin-top: 1em;
+    font-size: 0.9em;
   }
 }
