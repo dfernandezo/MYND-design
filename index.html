@@ -10,38 +10,40 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="header-wrapper">
-        <div class="logo">
-          <img src="/images/image 5.png" alt="logo-mynd" />
+      <div class="centering">
+        <div class="header-wrapper">
+          <div class="logo">
+            <img src="/images/image 5.png" alt="logo-mynd" />
+          </div>
+          <button class="login">Iniciar Sesion</button>
         </div>
-        <button class="login">Iniciar Sesion</button>
-      </div>
-      <div class="first-content-wrapper">
-        <div class="left-wrapper">
-          <h1>VENDE Y ARRIENDA TU INMUEBLE CON RECORRIDO VIRTUAL 360°</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            vitae nam eaque cumque dolores! Dolorem, dolores veniam amet ducimus
-            veritatis impedit nisi fuga eum. Veritatis hic perferendis placeat
-            delectus incidunt.
-          </p>
-          <button>Quiero Publicar Mi Inmueble</button>
-        </div>
-        <div class="right-wrapper">
-          <iframe
-            src="https://www.youtube.com/watch?v=GQ9SaiTV9Mg&feature=emb_logo&ab_channel=Mynd3D"
-          ></iframe>
+        <div class="first-content-wrapper">
+          <div class="left-wrapper animated animatedFadeInUp fadeInUp">
+            <h1 >
+              VENDE Y ARRIENDA TU INMUEBLE CON RECORRIDO VIRTUAL 360°
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores vitae nam eaque cumque dolores! Dolorem, dolores veniam
+              amet ducimus veritatis impedit nisi fuga eum. Veritatis hic
+              perferendis placeat delectus incidunt.
+            </p>
+            <button>Quiero Publicar Mi Inmueble</button>
+          </div>
+          <div class="right-wrapper">
+            <iframe width="560" height="349" src="https://www.youtube.com/embed/GQ9SaiTV9Mg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
     <div class="main-content">
-      <div class="contact-sell-us animated animatedFadeInUp fadeInUp">
+      <div class="contact-sell-us">
         <div class="left-wrapper-img">
           <img src="/images/phone 1.png" alt="phone" data-aos="fade-right" />
         </div>
-        <div class="right-wrapper-text">
+        <div class="right-wrapper-text animated animatedFadeInUp fadeInUp">
           <h1>Contactanos y Vende tu Inmueble con Nosotros.</h1>
-          <div class="parrafos">
+          <div class="parrafos ">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
               tempus auctor quis interdum iaculis et nibh. Ac euismod dolor sit
@@ -59,12 +61,14 @@
         </div>
       </div>
       <div class="why-us">
-        <h1>¿POR QUÉ VENDER CON RECORRIDO VIRTUAL 360°?</h1>
-        <p>
-          Aumentamos la opción de venta y arriendo de tu inmueble con
-          herramientas de Marketing Digital Inmobiliario.
-        </p>
-        <div class="why-us-img-wrapper">
+        <div class="heading-text">
+          <h1>¿POR QUÉ VENDER CON RECORRIDO VIRTUAL 360°?</h1>
+          <p>
+            Aumentamos la opción de venta y arriendo de tu inmueble con
+            herramientas de Marketing Digital Inmobiliario.
+          </p>
+        </div>
+        <div class="why-us-img-wrapper animated animatedFadeInUp fadeInUp">
           <div class="img-element">
             <img src="/images/imgonepng 1.png" alt="img" />
             <p>
@@ -99,7 +103,7 @@
       </div>
       <div class="colaboramos">
         <h1>Colaboramos con...</h1>
-        <div class="colaboramos-img-wrapper">
+        <div class="colaboramos-img-wrapper animated animatedFadeInUp fadeInUp">
           <div class="colaboramos-img-container">
             <img src="/images/imagencitauno 1.png" alt="img" />
             <h3>PROYECTOS SOBRE PLANOS</h3>
@@ -118,22 +122,14 @@
     </div>
     <script>
       ScrollOut({
-        targets: ".main-content",
+        targets: ".fadeInUp",
+        //once: true,
         onShown: function (el) {
           if (!el.src) {
             el.src = el.dataset.src;
           }
         },
-        onHidden: function (el) {
-          if (!el.src) {
-            el.src = el.dataset.src;
-          }
-        },
       });
-      // const note = document.querySelector(".note");
-      // css(note, {
-      //   transition: 2s all ease-in-out .1s;
-      // });
     </script>
   </body>
 </html>
